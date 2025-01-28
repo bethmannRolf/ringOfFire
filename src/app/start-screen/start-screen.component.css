@@ -11,3 +11,22 @@
 .start-screen img {
   height: 100vh;
 }
+
+.start-label-box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.start-label-box img {
+  width: 25vw;
+  height: auto;
+}
+
+.start-label-box img:hover {
+  filter: brightness(1.5);
+  cursor: pointer;
+  user-select: none;
+}

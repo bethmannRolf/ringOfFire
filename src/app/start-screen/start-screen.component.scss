@@ -12,5 +12,24 @@
     }
 }
 
+.start-label-box{
+    position: absolute;
+    left: 0;
+    right: 0;
+    
+    display: flex;
+    
+    justify-content: center;
 
+    img{
+        width: 25vw;
+        height: auto;
+
+        &:hover{
+            filter: brightness(1.5);
+            cursor: pointer;
+            user-select: none;
+        }
+    }
+}
 

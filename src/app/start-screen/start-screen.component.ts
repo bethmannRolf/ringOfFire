@@ -9,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class StartScreenComponent {
 
+
+
+newGame(){
+//StartGame
+  
+}
+
+
+
 }
