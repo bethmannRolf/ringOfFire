@@ -26,6 +26,7 @@
         height: auto;
 
         &:hover{
+            scale: 105%;
             filter: brightness(1.5);
             cursor: pointer;
             user-select: none;
