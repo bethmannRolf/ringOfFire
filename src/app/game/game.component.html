@@ -1,8 +1,16 @@
 <div class="board-container">
 
-    <img src="./../../assets/img/board_2.jpg">
-    <div class="start-label-box">
-      
+
+
+    <div class="card-stack">
+
+        <img *ngFor="let c of [0,1,2,3,4]; let i = index" [ngStyle]="{ 'right.px': i * 20 }"
+            src="./../../assets/img/card_cover.png">
+        <img (click)="takeCard()"  class="top-card" style="right: 100px"
+            src="./../../assets/img/card_cover.png">
+        <img (click)="takeCard()" *ngIf="pickCardAnimation" [class.pick-card]="pickCardAnimation" class=" pick-card" style="right: 100px"
+            src="./../../assets/img/ace_1.png">
+
     </div>
-    
-    </div>
+
+</div>
