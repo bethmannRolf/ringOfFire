@@ -30,15 +30,24 @@ newGame(){
 
 
 takeCard() {
+  if (!this.pickCardAnimation) {
+    
+  
   const card = this.game.stack.pop();
   if (card !== undefined) {
     this.currentCard = card;
+    console.log(this.currentCard)
     this.pickCardAnimation = true;
+
+setTimeout(() => {
+  this.pickCardAnimation = false;
+}, 1500);
+
   } else {
     console.warn('Keine Karten mehr im Stapel!');
   }
 }
-
+}
 
 
 
