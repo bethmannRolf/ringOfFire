@@ -12,7 +12,7 @@ import { Game } from '../game';
 export class GameComponent implements OnInit{
 pickCardAnimation = false;
 game!: Game;
-
+currentCard: string = '';
 constructor(){
 
 }
@@ -28,8 +28,15 @@ newGame(){
 
 
 
-takeCard(){
-this.pickCardAnimation = true;
+
+takeCard() {
+  const card = this.game.stack.pop();
+  if (card !== undefined) {
+    this.currentCard = card;
+    this.pickCardAnimation = true;
+  } else {
+    console.warn('Keine Karten mehr im Stapel!');
+  }
 }
 
 
