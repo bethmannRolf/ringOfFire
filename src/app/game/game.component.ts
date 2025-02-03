@@ -1,20 +1,35 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Game } from '../game';
 
 @Component({
   selector: 'app-game',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './game.component.html',
-  styleUrl: './game.component.scss'
+  styleUrls: ['./game.component.scss']
 })
-export class GameComponent {
+export class GameComponent implements OnInit{
 pickCardAnimation = false;
+game!: Game;
+
+constructor(){
+
+}
+
+ngOnInit():void{
+this.newGame();
+}
+
+newGame(){
+  this.game = new Game();
+  console.log(this.game)
+}
+
+
 
 takeCard(){
-
 this.pickCardAnimation = true;
-
 }
 
 
