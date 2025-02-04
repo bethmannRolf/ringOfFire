@@ -1,0 +1,14 @@
+.player{
+    display:flex;
+    align-items:center;
+    font-size:18px;
+    gap: 10px;
+
+    img{
+        width: 75px;
+        height:75px;
+        object-fit:cover;
+        border-radius: 100%
+    }
+
+}
