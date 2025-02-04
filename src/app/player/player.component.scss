@@ -1,9 +1,16 @@
 .player{
+    width:300px;
     display:flex;
     align-items:center;
     font-size:18px;
     gap: 10px;
+    border-top-left-radius:10px;
+    border-bottom-left-radius:10px;
 
+span{
+    font-size:32px;
+}
+background-color: lightgreen;
     img{
         width: 75px;
         height:75px;
