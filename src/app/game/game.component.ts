@@ -8,6 +8,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatDialog } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
+import{ GameInfoComponent } from "../game-info/game-info.component"
 
 
 
@@ -16,7 +17,7 @@ import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player
 @Component({
   selector: 'app-game',
   standalone: true,
-  imports: [CommonModule, PlayerComponent, MatButtonModule, MatIconModule, MatDialogModule, MatInputModule],
+  imports: [CommonModule, PlayerComponent, MatButtonModule, MatIconModule, MatDialogModule, MatInputModule, GameInfoComponent],
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.scss']
 })
