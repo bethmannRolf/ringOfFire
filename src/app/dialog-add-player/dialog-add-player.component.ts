@@ -16,5 +16,9 @@ export class DialogAddPlayerComponent {
 
   name: string = ''
 
+  onNoClick(){
+
+  }
+
 
 }
