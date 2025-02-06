@@ -11,6 +11,6 @@ import { Component,Input } from '@angular/core';
 export class PlayerComponent {
 
   @Input() name!: string; // Beispiel für einen Input
-
+  @Input() playerActive:boolean = false;
 
 }
