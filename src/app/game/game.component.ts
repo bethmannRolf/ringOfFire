@@ -7,6 +7,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDialog } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
+import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
+
 
 
 
@@ -47,7 +49,6 @@ export class GameComponent implements OnInit {
         this.currentCard = card;
         console.log(this.currentCard)
         this.pickCardAnimation = true;
-        // this.game.playedCards.push(this.currentCard);
 
         setTimeout(() => {
           this.game.playedCards.push(this.currentCard);
@@ -61,15 +62,11 @@ export class GameComponent implements OnInit {
   }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-      data: { name: this.name(), animal: this.animal() },
-    });
+    const dialogRef = this.dialog.open(DialogAddPlayerComponent);
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      if (result !== undefined) {
-        this.animal.set(result);
-      }
+
     });
   }
 
