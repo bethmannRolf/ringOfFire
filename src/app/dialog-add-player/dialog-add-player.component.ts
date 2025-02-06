@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {MatInputModule} from '@angular/material/input'
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
-import { MatDialog } from '@angular/material/dialog';
+
 
 
 @Component({
