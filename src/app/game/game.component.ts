@@ -49,7 +49,7 @@ export class GameComponent implements OnInit {
       const card = this.game.stack.pop();
       if (card !== undefined) {
         this.currentCard = card;
-        console.log(this.currentCard)
+        console.log('Hallo',this.currentCard)
         this.pickCardAnimation = true;
 
         setTimeout(() => {
