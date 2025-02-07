@@ -11,10 +11,6 @@ import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player
 import{ GameInfoComponent } from "../game-info/game-info.component"
 import {MatCardModule} from '@angular/material/card';
 
-
-
-
-
 @Component({
   selector: 'app-game',
   standalone: true,
@@ -27,7 +23,6 @@ export class GameComponent implements OnInit {
   game!: Game;
   currentCard: string = '';
   constructor(public dialog: MatDialog) {
-
   }
 
   ngOnInit(): void {
@@ -36,51 +31,31 @@ export class GameComponent implements OnInit {
 
   newGame() {
     this.game = new Game();
-    console.log(this.game)
   }
-
-
-
 
   takeCard() {
     if (!this.pickCardAnimation) {
-
-
       const card = this.game.stack.pop();
       if (card !== undefined) {
         this.currentCard = card;
-        console.log('Hallo',this.currentCard)
         this.pickCardAnimation = true;
-
-
-
         this.game.currentPlayer++
         this.game.currentPlayer =  this.game.currentPlayer %  this.game.players.length;
         setTimeout(() => {
           this.game.playedCards.push(this.currentCard);
           this.pickCardAnimation = false;
         }, 1000);
-
       } else {
-        console.warn('Keine Karten mehr im Stapel!');
       }
     }
   }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogAddPlayerComponent);
-
     dialogRef.afterClosed().subscribe((name: string) => {
       if( name && name.length > 0){
           this.game.players.push(name)
       }
     });
   }
-
-
-
-
-
-
 }
-
